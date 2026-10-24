@@ -218,3 +218,23 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# KnowSWE research datasets and external repositories
+data/real_repos/
+
+# Downloaded model weights
+*.gguf
+*.safetensors
+*.pth
+*.pt
+
+# Local research credentials
+.env.*
+!.env.example
+
+# Temporary experiment outputs
+*.tmp
+
+# Development backups
+*.backup
+*.bak

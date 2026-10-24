@@ -1,0 +1,443 @@
+[
+  {
+    "id": "sqlfluff__sqlfluff-1625",
+    "base_commit": "14e1a23a3166b9a645a16de96f694c77a5d4abb7",
+    "E3": {
+      "hit": true,
+      "tokens": 2000
+    },
+    "E4": {
+      "hit": true,
+      "tokens": 2000,
+      "selected_chunks": [
+        {
+          "file": "src/sqlfluff/rules/L031.py",
+          "start_line": 12,
+          "end_line": 78,
+          "estimated_tokens": 499,
+          "score": 0.9678836335198052
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "start_line": 47,
+          "end_line": 55,
+          "estimated_tokens": 74,
+          "score": 0.9648459967941814
+        },
+        {
+          "file": "src/sqlfluff/rules/L031.py",
+          "start_line": 177,
+          "end_line": 219,
+          "estimated_tokens": 454,
+          "score": 0.9382654237811823
+        },
+        {
+          "file": "src/sqlfluff/rules/L031.py",
+          "start_line": 129,
+          "end_line": 176,
+          "estimated_tokens": 494,
+          "score": 0.8846097576817014
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "start_line": 392,
+          "end_line": 421,
+          "estimated_tokens": 335,
+          "score": 0.8511245448927416
+        },
+        {
+          "file": "test/api/util_test.py",
+          "start_line": 1,
+          "end_line": 24,
+          "estimated_tokens": 126,
+          "score": 0.7528500997180554
+        },
+        {
+          "file": "test/rules/std_L020_test.py",
+          "start_line": 1,
+          "end_line": 5,
+          "estimated_tokens": 16,
+          "score": 0.4076612827525411
+        },
+        {
+          "file": "src/sqlfluff/core/rules/analysis/select.py",
+          "start_line": 19,
+          "end_line": 20,
+          "estimated_tokens": 1,
+          "score": 0.3965909099789078
+        },
+        {
+          "file": "src/sqlfluff/core/rules/analysis/select.py",
+          "start_line": 98,
+          "end_line": 99,
+          "estimated_tokens": 1,
+          "score": 0.3965909099789078
+        }
+      ]
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-2419",
+    "base_commit": "f1dba0e1dd764ae72d67c3d5e1471cf14d3db030",
+    "E3": {
+      "hit": true,
+      "tokens": 2000
+    },
+    "E4": {
+      "hit": true,
+      "tokens": 2000,
+      "selected_chunks": [
+        {
+          "file": "src/sqlfluff/rules/L060.py",
+          "start_line": 11,
+          "end_line": 62,
+          "estimated_tokens": 382,
+          "score": 1.0
+        },
+        {
+          "file": "src/sqlfluff/rules/L060.py",
+          "start_line": 1,
+          "end_line": 10,
+          "estimated_tokens": 76,
+          "score": 0.6503374530851904
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "start_line": 49,
+          "end_line": 57,
+          "estimated_tokens": 77,
+          "score": 0.4340326536476315
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "start_line": 924,
+          "end_line": 936,
+          "estimated_tokens": 110,
+          "score": 0.39559379129183814
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "start_line": 58,
+          "end_line": 78,
+          "estimated_tokens": 203,
+          "score": 0.3875252761136645
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "start_line": 897,
+          "end_line": 910,
+          "estimated_tokens": 129,
+          "score": 0.3792961694411914
+        },
+        {
+          "file": "src/sqlfluff/rules/L043.py",
+          "start_line": 235,
+          "end_line": 258,
+          "estimated_tokens": 272,
+          "score": 0.3774705827087227
+        },
+        {
+          "file": "src/sqlfluff/core/rules/base.py",
+          "start_line": 828,
+          "end_line": 885,
+          "estimated_tokens": 489,
+          "score": 0.358217166088333
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "start_line": 881,
+          "end_line": 894,
+          "estimated_tokens": 133,
+          "score": 0.3571650014132365
+        },
+        {
+          "file": "src/sqlfluff/dialects/dialect_bigquery.py",
+          "start_line": 666,
+          "end_line": 674,
+          "estimated_tokens": 72,
+          "score": 0.3183620408381877
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "start_line": 506,
+          "end_line": 509,
+          "estimated_tokens": 53,
+          "score": 0.2810753080210882
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "start_line": 79,
+          "end_line": 80,
+          "estimated_tokens": 1,
+          "score": 0.19090807029504275
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "start_line": 96,
+          "end_line": 97,
+          "estimated_tokens": 1,
+          "score": 0.19090807029504275
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "start_line": 113,
+          "end_line": 114,
+          "estimated_tokens": 1,
+          "score": 0.19090807029504275
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "start_line": 355,
+          "end_line": 356,
+          "estimated_tokens": 1,
+          "score": 0.19090807029504275
+        }
+      ]
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1733",
+    "base_commit": "a1579a16b1d8913d9d7c7d12add374a290bcc78c",
+    "E3": {
+      "hit": false,
+      "tokens": 2000
+    },
+    "E4": {
+      "hit": false,
+      "tokens": 2000,
+      "selected_chunks": [
+        {
+          "file": "examples/01_basic_api_usage.py",
+          "start_line": 1,
+          "end_line": 50,
+          "estimated_tokens": 451,
+          "score": 0.9394909317357277
+        },
+        {
+          "file": "test/core/templaters/jinja_test.py",
+          "start_line": 532,
+          "end_line": 567,
+          "estimated_tokens": 444,
+          "score": 0.8678168742898893
+        },
+        {
+          "file": "src/sqlfluff/rules/L018.py",
+          "start_line": 10,
+          "end_line": 67,
+          "estimated_tokens": 490,
+          "score": 0.8539861252660044
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "start_line": 333,
+          "end_line": 375,
+          "estimated_tokens": 405,
+          "score": 0.8228365508641935
+        },
+        {
+          "file": "test/dialects/ansi_test.py",
+          "start_line": 185,
+          "end_line": 203,
+          "estimated_tokens": 144,
+          "score": 0.7878138610222807
+        },
+        {
+          "file": "test/api/simple_test.py",
+          "start_line": 135,
+          "end_line": 139,
+          "estimated_tokens": 63,
+          "score": 0.6375208325440358
+        },
+        {
+          "file": "plugins/sqlfluff-plugin-example/src/example/rules.py",
+          "start_line": 22,
+          "end_line": 24,
+          "estimated_tokens": 3,
+          "score": 0.42177267499819504
+        }
+      ]
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1517",
+    "base_commit": "304a197829f98e7425a46d872ada73176137e5ae",
+    "E3": {
+      "hit": false,
+      "tokens": 2000
+    },
+    "E4": {
+      "hit": false,
+      "tokens": 2000,
+      "selected_chunks": [
+        {
+          "file": "src/sqlfluff/core/linter/linter.py",
+          "start_line": 867,
+          "end_line": 873,
+          "estimated_tokens": 82,
+          "score": 0.9840531117309136
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "start_line": 601,
+          "end_line": 654,
+          "estimated_tokens": 496,
+          "score": 0.932580329287348
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "start_line": 307,
+          "end_line": 368,
+          "estimated_tokens": 495,
+          "score": 0.931958180171406
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "start_line": 655,
+          "end_line": 699,
+          "estimated_tokens": 408,
+          "score": 0.9298989856753976
+        },
+        {
+          "file": "src/sqlfluff/core/linter/linter.py",
+          "start_line": 547,
+          "end_line": 594,
+          "estimated_tokens": 495,
+          "score": 0.9279107066358099
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "start_line": 231,
+          "end_line": 232,
+          "estimated_tokens": 17,
+          "score": 0.7966153500831887
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "start_line": 50,
+          "end_line": 51,
+          "estimated_tokens": 1,
+          "score": 0.7164569005749326
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "start_line": 102,
+          "end_line": 103,
+          "estimated_tokens": 1,
+          "score": 0.7164569005749326
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "start_line": 126,
+          "end_line": 127,
+          "estimated_tokens": 1,
+          "score": 0.7164569005749326
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "start_line": 189,
+          "end_line": 190,
+          "estimated_tokens": 1,
+          "score": 0.7164569005749326
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "start_line": 203,
+          "end_line": 204,
+          "estimated_tokens": 1,
+          "score": 0.7164569005749326
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "start_line": 413,
+          "end_line": 414,
+          "estimated_tokens": 1,
+          "score": 0.7164569005749326
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "start_line": 597,
+          "end_line": 598,
+          "estimated_tokens": 1,
+          "score": 0.7164569005749326
+        }
+      ]
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1763",
+    "base_commit": "a10057635e5b2559293a676486f0b730981f037a",
+    "E3": {
+      "hit": false,
+      "tokens": 2000
+    },
+    "E4": {
+      "hit": false,
+      "tokens": 2000,
+      "selected_chunks": [
+        {
+          "file": "src/sqlfluff/core/rules/config_info.py",
+          "start_line": 60,
+          "end_line": 104,
+          "estimated_tokens": 391,
+          "score": 1.0
+        },
+        {
+          "file": "src/sqlfluff/core/rules/config_info.py",
+          "start_line": 1,
+          "end_line": 59,
+          "estimated_tokens": 498,
+          "score": 0.9306079461716601
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "start_line": 143,
+          "end_line": 186,
+          "estimated_tokens": 480,
+          "score": 0.8261501900007752
+        },
+        {
+          "file": "examples/01_basic_api_usage.py",
+          "start_line": 1,
+          "end_line": 50,
+          "estimated_tokens": 451,
+          "score": 0.8023484149273227
+        },
+        {
+          "file": "plugins/sqlfluff-templater-dbt/test/templater_test.py",
+          "start_line": 218,
+          "end_line": 233,
+          "estimated_tokens": 176,
+          "score": 0.7246738203935756
+        },
+        {
+          "file": "plugins/sqlfluff-templater-dbt/sqlfluff_templater_dbt/templater.py",
+          "start_line": 44,
+          "end_line": 45,
+          "estimated_tokens": 1,
+          "score": 0.44415277553809696
+        },
+        {
+          "file": "plugins/sqlfluff-templater-dbt/test/templater_test.py",
+          "start_line": 32,
+          "end_line": 33,
+          "estimated_tokens": 1,
+          "score": 0.43934931093417673
+        },
+        {
+          "file": "plugins/sqlfluff-templater-dbt/test/templater_test.py",
+          "start_line": 184,
+          "end_line": 185,
+          "estimated_tokens": 1,
+          "score": 0.43934931093417673
+        },
+        {
+          "file": "plugins/sqlfluff-templater-dbt/test/templater_test.py",
+          "start_line": 216,
+          "end_line": 217,
+          "estimated_tokens": 1,
+          "score": 0.43934931093417673
+        }
+      ]
+    }
+  }
+]

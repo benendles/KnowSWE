@@ -1,0 +1,127 @@
+[
+  {
+    "id": "sqlfluff__sqlfluff-1625",
+    "coverage": {
+      "E3": {
+        "covered_lines": 1,
+        "total_changed_lines": 1,
+        "coverage": 1.0
+      },
+      "E5": {
+        "covered_lines": 0,
+        "total_changed_lines": 1,
+        "coverage": 0.0
+      },
+      "E6a": {
+        "covered_lines": 1,
+        "total_changed_lines": 1,
+        "coverage": 1.0
+      },
+      "E6b": {
+        "covered_lines": 0,
+        "total_changed_lines": 1,
+        "coverage": 0.0
+      }
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-2419",
+    "coverage": {
+      "E3": {
+        "covered_lines": 1,
+        "total_changed_lines": 1,
+        "coverage": 1.0
+      },
+      "E5": {
+        "covered_lines": 1,
+        "total_changed_lines": 1,
+        "coverage": 1.0
+      },
+      "E6a": {
+        "covered_lines": 1,
+        "total_changed_lines": 1,
+        "coverage": 1.0
+      },
+      "E6b": {
+        "covered_lines": 1,
+        "total_changed_lines": 1,
+        "coverage": 1.0
+      }
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1733",
+    "coverage": {
+      "E3": {
+        "covered_lines": 0,
+        "total_changed_lines": 1,
+        "coverage": 0.0
+      },
+      "E5": {
+        "covered_lines": 0,
+        "total_changed_lines": 1,
+        "coverage": 0.0
+      },
+      "E6a": {
+        "covered_lines": 0,
+        "total_changed_lines": 1,
+        "coverage": 0.0
+      },
+      "E6b": {
+        "covered_lines": 0,
+        "total_changed_lines": 1,
+        "coverage": 0.0
+      }
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1517",
+    "coverage": {
+      "E3": {
+        "covered_lines": 0,
+        "total_changed_lines": 5,
+        "coverage": 0.0
+      },
+      "E5": {
+        "covered_lines": 0,
+        "total_changed_lines": 5,
+        "coverage": 0.0
+      },
+      "E6a": {
+        "covered_lines": 0,
+        "total_changed_lines": 5,
+        "coverage": 0.0
+      },
+      "E6b": {
+        "covered_lines": 0,
+        "total_changed_lines": 5,
+        "coverage": 0.0
+      }
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1763",
+    "coverage": {
+      "E3": {
+        "covered_lines": 0,
+        "total_changed_lines": 3,
+        "coverage": 0.0
+      },
+      "E5": {
+        "covered_lines": 0,
+        "total_changed_lines": 3,
+        "coverage": 0.0
+      },
+      "E6a": {
+        "covered_lines": 0,
+        "total_changed_lines": 3,
+        "coverage": 0.0
+      },
+      "E6b": {
+        "covered_lines": 0,
+        "total_changed_lines": 3,
+        "coverage": 0.0
+      }
+    }
+  }
+]

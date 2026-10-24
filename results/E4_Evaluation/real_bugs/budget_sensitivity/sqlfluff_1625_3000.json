@@ -1,0 +1,77 @@
+{
+  "dataset": "data/benchmarks/swebench_lite/sqlfluff_1625.json",
+  "budget": 3000,
+  "top_k": 3,
+  "depth": 2,
+  "summary": {
+    "E0_BM25": {
+      "cases": 1,
+      "hit_rate": 1.0,
+      "mean_recall": 1.0,
+      "mean_estimated_tokens": 3000.0
+    },
+    "E1_Graph": {
+      "cases": 1,
+      "hit_rate": 1.0,
+      "mean_recall": 1.0,
+      "mean_estimated_tokens": 2019.0
+    },
+    "E2_BEDS": {
+      "cases": 1,
+      "hit_rate": 1.0,
+      "mean_recall": 1.0,
+      "mean_estimated_tokens": 2019.0
+    }
+  },
+  "cases": [
+    {
+      "id": "sqlfluff__sqlfluff-1625",
+      "bug_report": "TSQL - L031 incorrectly triggers \"Avoid using aliases in join condition\" when no join present\n## Expected Behaviour\r\n\r\nBoth of these queries should pass, the only difference is the addition of a table alias 'a':\r\n\r\n1/ no alias\r\n\r\n```\r\nSELECT [hello]\r\nFROM\r\n    mytable\r\n```\r\n\r\n2/ same query with alias\r\n\r\n```\r\nSELECT a.[hello]\r\nFROM\r\n    mytable AS a\r\n```\r\n\r\n## Observed Behaviour\r\n\r\n1/ passes\r\n2/ fails with: L031: Avoid using aliases in join condition.\r\n\r\nBut there is no join condition :-)\r\n\r\n## Steps to Reproduce\r\n\r\nLint queries above\r\n\r\n## Dialect\r\n\r\nTSQL\r\n\r\n## Version\r\n\r\nsqlfluff 0.6.9\r\nPython 3.6.9\r\n\r\n## Configuration\r\n\r\nN/A\n",
+      "faulty_files": [
+        "src/sqlfluff/rules/L031.py"
+      ],
+      "budget": 3000,
+      "results": {
+        "E0_BM25": {
+          "selected_files": [
+            "src/sqlfluff/rules/L031.py",
+            "src/sqlfluff/rules/L028.py",
+            "test/fixtures/templater/jinja_j_libraries/libs/foo.py",
+            "test/api/__init__.py"
+          ],
+          "faulty_files_found": [
+            "src/sqlfluff/rules/L031.py"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "estimated_tokens_used": 3000,
+          "remaining_budget": 0
+        },
+        "E1_Graph": {
+          "selected_files": [
+            "src/sqlfluff/rules/L031.py"
+          ],
+          "faulty_files_found": [
+            "src/sqlfluff/rules/L031.py"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "estimated_tokens_used": 2019,
+          "remaining_budget": 981
+        },
+        "E2_BEDS": {
+          "selected_files": [
+            "src/sqlfluff/rules/L031.py"
+          ],
+          "faulty_files_found": [
+            "src/sqlfluff/rules/L031.py"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "estimated_tokens_used": 2019,
+          "remaining_budget": 981
+        }
+      }
+    }
+  ]
+}

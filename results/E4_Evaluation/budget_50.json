@@ -1,0 +1,77 @@
+{
+  "dataset": "data/benchmarks/toy_bugs.json",
+  "budget": 50,
+  "top_k": 1,
+  "depth": 2,
+  "summary": {
+    "E0_BM25": {
+      "cases": 1,
+      "hit_rate": 1.0,
+      "mean_recall": 1.0,
+      "mean_estimated_tokens": 36.0
+    },
+    "E1_Graph": {
+      "cases": 1,
+      "hit_rate": 1.0,
+      "mean_recall": 1.0,
+      "mean_estimated_tokens": 36.0
+    },
+    "E2_BEDS": {
+      "cases": 1,
+      "hit_rate": 1.0,
+      "mean_recall": 1.0,
+      "mean_estimated_tokens": 36.0
+    }
+  },
+  "cases": [
+    {
+      "id": "BUG-001",
+      "bug_report": "Authentication tokens expire immediately after login",
+      "faulty_files": [
+        "config.py"
+      ],
+      "budget": 50,
+      "results": {
+        "E0_BM25": {
+          "selected_files": [
+            "auth.py",
+            "config.py"
+          ],
+          "faulty_files_found": [
+            "config.py"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "estimated_tokens_used": 36,
+          "remaining_budget": 14
+        },
+        "E1_Graph": {
+          "selected_files": [
+            "auth.py",
+            "config.py"
+          ],
+          "faulty_files_found": [
+            "config.py"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "estimated_tokens_used": 36,
+          "remaining_budget": 14
+        },
+        "E2_BEDS": {
+          "selected_files": [
+            "auth.py",
+            "config.py"
+          ],
+          "faulty_files_found": [
+            "config.py"
+          ],
+          "hit": true,
+          "recall": 1.0,
+          "estimated_tokens_used": 36,
+          "remaining_budget": 14
+        }
+      }
+    }
+  ]
+}

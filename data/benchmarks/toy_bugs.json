@@ -1,0 +1,8 @@
+[
+  {
+    "id": "BUG-001",
+    "repository": "data/sample_repo",
+    "bug_report": "Authentication tokens expire immediately after login",
+    "faulty_files": ["config.py"]
+  }
+]

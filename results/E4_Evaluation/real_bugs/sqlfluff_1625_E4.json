@@ -1,0 +1,78 @@
+[
+  {
+    "case_id": "sqlfluff__sqlfluff-1625",
+    "budget": 2000,
+    "file_weight": 0.4,
+    "hit": true,
+    "recall": 1.0,
+    "estimated_tokens_used": 2000,
+    "selected_chunks": [
+      {
+        "file": "src/sqlfluff/rules/L031.py",
+        "start_line": 12,
+        "end_line": 78,
+        "estimated_tokens": 499,
+        "score": 0.9678836335198052
+      },
+      {
+        "file": "test/cli/commands_test.py",
+        "start_line": 47,
+        "end_line": 55,
+        "estimated_tokens": 74,
+        "score": 0.9648459967941814
+      },
+      {
+        "file": "src/sqlfluff/rules/L031.py",
+        "start_line": 177,
+        "end_line": 219,
+        "estimated_tokens": 454,
+        "score": 0.9382654237811823
+      },
+      {
+        "file": "src/sqlfluff/rules/L031.py",
+        "start_line": 129,
+        "end_line": 176,
+        "estimated_tokens": 494,
+        "score": 0.8846097576817014
+      },
+      {
+        "file": "test/cli/commands_test.py",
+        "start_line": 392,
+        "end_line": 421,
+        "estimated_tokens": 335,
+        "score": 0.8511245448927416
+      },
+      {
+        "file": "test/api/util_test.py",
+        "start_line": 1,
+        "end_line": 24,
+        "estimated_tokens": 126,
+        "score": 0.7528500997180554
+      },
+      {
+        "file": "test/rules/std_L020_test.py",
+        "start_line": 1,
+        "end_line": 5,
+        "estimated_tokens": 16,
+        "score": 0.4076612827525411
+      },
+      {
+        "file": "src/sqlfluff/core/rules/analysis/select.py",
+        "start_line": 19,
+        "end_line": 20,
+        "estimated_tokens": 1,
+        "score": 0.3965909099789078
+      },
+      {
+        "file": "src/sqlfluff/core/rules/analysis/select.py",
+        "start_line": 98,
+        "end_line": 99,
+        "estimated_tokens": 1,
+        "score": 0.3965909099789078
+      }
+    ],
+    "reference_files": [
+      "src/sqlfluff/rules/L031.py"
+    ]
+  }
+]

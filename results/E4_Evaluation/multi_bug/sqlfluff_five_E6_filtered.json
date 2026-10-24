@@ -1,0 +1,659 @@
+[
+  {
+    "id": "sqlfluff__sqlfluff-1625",
+    "budget": 2000,
+    "original_chunk_count": 2481,
+    "filtered_chunk_count": 2209,
+    "E6a": {
+      "hit": true,
+      "selected_chunks": [
+        {
+          "file": "test/cli/commands_test.py",
+          "symbol": "<module>",
+          "start_line": 47,
+          "end_line": 55,
+          "estimated_tokens": 74
+        },
+        {
+          "file": "test/api/util_test.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 24,
+          "estimated_tokens": 126
+        },
+        {
+          "file": "src/sqlfluff/rules/L031.py",
+          "symbol": "Rule_L031",
+          "start_line": 12,
+          "end_line": 78,
+          "estimated_tokens": 499
+        },
+        {
+          "file": "src/sqlfluff/rules/L031.py",
+          "symbol": "Rule_L031",
+          "start_line": 177,
+          "end_line": 219,
+          "estimated_tokens": 454
+        },
+        {
+          "file": "src/sqlfluff/rules/L020.py",
+          "symbol": "Rule_L020",
+          "start_line": 9,
+          "end_line": 85,
+          "estimated_tokens": 485
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "symbol": "<module>",
+          "start_line": 392,
+          "end_line": 421,
+          "estimated_tokens": 335
+        },
+        {
+          "file": "src/sqlfluff/dialects/dialect_ansi.py",
+          "symbol": "FromExpressionElementSegment",
+          "start_line": 1101,
+          "end_line": 1104,
+          "estimated_tokens": 26
+        }
+      ],
+      "estimated_tokens_used": 1999
+    },
+    "E6b": {
+      "hit": true,
+      "selected_chunks": [
+        {
+          "file": "test/cli/commands_test.py",
+          "symbol": "<module>",
+          "start_line": 47,
+          "end_line": 55,
+          "estimated_tokens": 74
+        },
+        {
+          "file": "test/api/util_test.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 24,
+          "estimated_tokens": 126
+        },
+        {
+          "file": "src/sqlfluff/rules/L031.py",
+          "symbol": "Rule_L031",
+          "start_line": 12,
+          "end_line": 78,
+          "estimated_tokens": 499
+        },
+        {
+          "file": "src/sqlfluff/rules/L020.py",
+          "symbol": "Rule_L020",
+          "start_line": 9,
+          "end_line": 85,
+          "estimated_tokens": 485
+        },
+        {
+          "file": "src/sqlfluff/rules/L044.py",
+          "symbol": "Rule_L044",
+          "start_line": 15,
+          "end_line": 70,
+          "estimated_tokens": 485
+        },
+        {
+          "file": "examples/03_extracting_references.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 20,
+          "estimated_tokens": 136
+        },
+        {
+          "file": "src/sqlfluff/rules/L024.py",
+          "symbol": "Rule_L024",
+          "start_line": 9,
+          "end_line": 38,
+          "estimated_tokens": 166
+        },
+        {
+          "file": "src/sqlfluff/dialects/dialect_ansi.py",
+          "symbol": "FromExpressionElementSegment",
+          "start_line": 1101,
+          "end_line": 1104,
+          "estimated_tokens": 26
+        },
+        {
+          "file": "src/sqlfluff/core/plugin/lib.py",
+          "symbol": "<module>",
+          "start_line": 15,
+          "end_line": 17,
+          "estimated_tokens": 3
+        }
+      ],
+      "estimated_tokens_used": 2000
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-2419",
+    "budget": 2000,
+    "original_chunk_count": 3363,
+    "filtered_chunk_count": 3013,
+    "E6a": {
+      "hit": true,
+      "selected_chunks": [
+        {
+          "file": "src/sqlfluff/rules/L060.py",
+          "symbol": "Rule_L060",
+          "start_line": 11,
+          "end_line": 62,
+          "estimated_tokens": 382
+        },
+        {
+          "file": "src/sqlfluff/rules/L060.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 10,
+          "estimated_tokens": 76
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "symbol": "<module>",
+          "start_line": 49,
+          "end_line": 57,
+          "estimated_tokens": 77
+        },
+        {
+          "file": "src/sqlfluff/rules/L043.py",
+          "symbol": "Rule_L043",
+          "start_line": 235,
+          "end_line": 258,
+          "estimated_tokens": 272
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "symbol": "test_cli_disable_noqa_flag",
+          "start_line": 924,
+          "end_line": 936,
+          "estimated_tokens": 110
+        },
+        {
+          "file": "test/core/parser/segments_base_test.py",
+          "symbol": "test__parser__base_segments_base",
+          "start_line": 77,
+          "end_line": 107,
+          "estimated_tokens": 339
+        },
+        {
+          "file": "src/sqlfluff/rules/L042.py",
+          "symbol": "Rule_L042",
+          "start_line": 10,
+          "end_line": 74,
+          "estimated_tokens": 489
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "symbol": "test__cli__command_directed",
+          "start_line": 58,
+          "end_line": 78,
+          "estimated_tokens": 203
+        },
+        {
+          "file": "test/core/rules/__init__.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 7,
+          "estimated_tokens": 51
+        }
+      ],
+      "estimated_tokens_used": 1999
+    },
+    "E6b": {
+      "hit": true,
+      "selected_chunks": [
+        {
+          "file": "src/sqlfluff/rules/L060.py",
+          "symbol": "Rule_L060",
+          "start_line": 11,
+          "end_line": 62,
+          "estimated_tokens": 382
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "symbol": "<module>",
+          "start_line": 49,
+          "end_line": 57,
+          "estimated_tokens": 77
+        },
+        {
+          "file": "src/sqlfluff/rules/L043.py",
+          "symbol": "Rule_L043",
+          "start_line": 235,
+          "end_line": 258,
+          "estimated_tokens": 272
+        },
+        {
+          "file": "test/core/parser/segments_base_test.py",
+          "symbol": "test__parser__base_segments_base",
+          "start_line": 77,
+          "end_line": 107,
+          "estimated_tokens": 339
+        },
+        {
+          "file": "src/sqlfluff/dialects/dialect_bigquery.py",
+          "symbol": "<module>",
+          "start_line": 666,
+          "end_line": 674,
+          "estimated_tokens": 72
+        },
+        {
+          "file": "src/sqlfluff/rules/L042.py",
+          "symbol": "Rule_L042",
+          "start_line": 10,
+          "end_line": 74,
+          "estimated_tokens": 489
+        },
+        {
+          "file": "test/cli/formatters_test.py",
+          "symbol": "test__cli__formatters__violation",
+          "start_line": 25,
+          "end_line": 46,
+          "estimated_tokens": 180
+        },
+        {
+          "file": "plugins/sqlfluff-templater-dbt/test/templater_test.py",
+          "symbol": "_get_fixture_path",
+          "start_line": 94,
+          "end_line": 110,
+          "estimated_tokens": 185
+        },
+        {
+          "file": "src/sqlfluff/core/rules/analysis/select_crawler.py",
+          "symbol": "<module>",
+          "start_line": 29,
+          "end_line": 31,
+          "estimated_tokens": 4
+        }
+      ],
+      "estimated_tokens_used": 2000
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1733",
+    "budget": 2000,
+    "original_chunk_count": 2636,
+    "filtered_chunk_count": 2357,
+    "E6a": {
+      "hit": false,
+      "selected_chunks": [
+        {
+          "file": "examples/01_basic_api_usage.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 50,
+          "estimated_tokens": 451
+        },
+        {
+          "file": "src/sqlfluff/rules/L018.py",
+          "symbol": "Rule_L018",
+          "start_line": 10,
+          "end_line": 67,
+          "estimated_tokens": 490
+        },
+        {
+          "file": "test/rules/std_L019_test.py",
+          "symbol": "test__rules__std_L019_unparseable",
+          "start_line": 6,
+          "end_line": 36,
+          "estimated_tokens": 327
+        },
+        {
+          "file": "test/generate_parse_fixture_yml.py",
+          "symbol": "generate_parse_fixture",
+          "start_line": 10,
+          "end_line": 36,
+          "estimated_tokens": 295
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "symbol": "generic_roundtrip_test",
+          "start_line": 333,
+          "end_line": 375,
+          "estimated_tokens": 405
+        },
+        {
+          "file": "plugins/sqlfluff-plugin-example/src/example/rules.py",
+          "symbol": "<module>",
+          "start_line": 39,
+          "end_line": 44,
+          "estimated_tokens": 32
+        }
+      ],
+      "estimated_tokens_used": 2000
+    },
+    "E6b": {
+      "hit": false,
+      "selected_chunks": [
+        {
+          "file": "examples/01_basic_api_usage.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 50,
+          "estimated_tokens": 451
+        },
+        {
+          "file": "src/sqlfluff/rules/L018.py",
+          "symbol": "Rule_L018",
+          "start_line": 10,
+          "end_line": 67,
+          "estimated_tokens": 490
+        },
+        {
+          "file": "test/rules/std_L019_test.py",
+          "symbol": "test__rules__std_L019_unparseable",
+          "start_line": 6,
+          "end_line": 36,
+          "estimated_tokens": 327
+        },
+        {
+          "file": "test/generate_parse_fixture_yml.py",
+          "symbol": "generate_parse_fixture",
+          "start_line": 10,
+          "end_line": 36,
+          "estimated_tokens": 295
+        },
+        {
+          "file": "src/sqlfluff/__init__.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 29,
+          "estimated_tokens": 239
+        },
+        {
+          "file": "examples/03_extracting_references.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 20,
+          "estimated_tokens": 136
+        },
+        {
+          "file": "examples/02_timing_api_steps.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 11,
+          "estimated_tokens": 56
+        },
+        {
+          "file": "plugins/sqlfluff-plugin-example/src/example/rules.py",
+          "symbol": "<module>",
+          "start_line": 22,
+          "end_line": 24,
+          "estimated_tokens": 3
+        },
+        {
+          "file": "plugins/sqlfluff-plugin-example/src/example/rules.py",
+          "symbol": "<module>",
+          "start_line": 31,
+          "end_line": 33,
+          "estimated_tokens": 3
+        }
+      ],
+      "estimated_tokens_used": 2000
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1517",
+    "budget": 2000,
+    "original_chunk_count": 2404,
+    "filtered_chunk_count": 2144,
+    "E6a": {
+      "hit": false,
+      "selected_chunks": [
+        {
+          "file": "src/sqlfluff/core/linter/linter.py",
+          "symbol": "Linter",
+          "start_line": 867,
+          "end_line": 873,
+          "estimated_tokens": 82
+        },
+        {
+          "file": "src/sqlfluff/core/linter/linter.py",
+          "symbol": "Linter",
+          "start_line": 547,
+          "end_line": 594,
+          "estimated_tokens": 495
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "symbol": "lint",
+          "start_line": 307,
+          "end_line": 368,
+          "estimated_tokens": 495
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "symbol": "test__cli__command_lint_serialize_github_annotation",
+          "start_line": 601,
+          "end_line": 654,
+          "estimated_tokens": 496
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "symbol": "test__cli__command_lint_serialize_github_annotation",
+          "start_line": 655,
+          "end_line": 699,
+          "estimated_tokens": 408
+        },
+        {
+          "file": "src/sqlfluff/api/simple.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 5,
+          "estimated_tokens": 19
+        },
+        {
+          "file": "src/sqlfluff/core/plugin/lib.py",
+          "symbol": "<module>",
+          "start_line": 14,
+          "end_line": 16,
+          "estimated_tokens": 3
+        }
+      ],
+      "estimated_tokens_used": 1998
+    },
+    "E6b": {
+      "hit": false,
+      "selected_chunks": [
+        {
+          "file": "src/sqlfluff/core/linter/linter.py",
+          "symbol": "Linter",
+          "start_line": 867,
+          "end_line": 873,
+          "estimated_tokens": 82
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "symbol": "lint",
+          "start_line": 307,
+          "end_line": 368,
+          "estimated_tokens": 495
+        },
+        {
+          "file": "src/sqlfluff/core/linter/linted_file.py",
+          "symbol": "LintedFile",
+          "start_line": 495,
+          "end_line": 499,
+          "estimated_tokens": 52
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "symbol": "test__cli__command_lint_serialize_github_annotation",
+          "start_line": 601,
+          "end_line": 654,
+          "estimated_tokens": 496
+        },
+        {
+          "file": "src/sqlfluff/api/simple.py",
+          "symbol": "parse",
+          "start_line": 72,
+          "end_line": 90,
+          "estimated_tokens": 174
+        },
+        {
+          "file": "src/sqlfluff/core/linter/linted_dir.py",
+          "symbol": "LintedDir",
+          "start_line": 132,
+          "end_line": 134,
+          "estimated_tokens": 35
+        },
+        {
+          "file": "src/sqlfluff/core/parser/parser.py",
+          "symbol": "Parser",
+          "start_line": 12,
+          "end_line": 33,
+          "estimated_tokens": 243
+        },
+        {
+          "file": "src/sqlfluff/core/linter/common.py",
+          "symbol": "NoQaDirective",
+          "start_line": 24,
+          "end_line": 29,
+          "estimated_tokens": 60
+        },
+        {
+          "file": "src/sqlfluff/core/file_helpers.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 7,
+          "estimated_tokens": 27
+        },
+        {
+          "file": "test/core/linter_test.py",
+          "symbol": "test__attempt_to_change_templater_warning",
+          "start_line": 646,
+          "end_line": 664,
+          "estimated_tokens": 217
+        },
+        {
+          "file": "src/sqlfluff/core/linter/runner.py",
+          "symbol": "BaseRunner",
+          "start_line": 83,
+          "end_line": 88,
+          "estimated_tokens": 70
+        },
+        {
+          "file": "src/sqlfluff/api/info.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 9,
+          "estimated_tokens": 48
+        }
+      ],
+      "estimated_tokens_used": 1999
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1763",
+    "budget": 2000,
+    "original_chunk_count": 2640,
+    "filtered_chunk_count": 2361,
+    "E6a": {
+      "hit": false,
+      "selected_chunks": [
+        {
+          "file": "src/sqlfluff/core/rules/config_info.py",
+          "symbol": "<module>",
+          "start_line": 60,
+          "end_line": 104,
+          "estimated_tokens": 391
+        },
+        {
+          "file": "examples/01_basic_api_usage.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 50,
+          "estimated_tokens": 451
+        },
+        {
+          "file": "src/sqlfluff/core/rules/config_info.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 59,
+          "estimated_tokens": 498
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "symbol": "core_options",
+          "start_line": 143,
+          "end_line": 186,
+          "estimated_tokens": 480
+        },
+        {
+          "file": "plugins/sqlfluff-templater-dbt/test/templater_test.py",
+          "symbol": "test__dbt_templated_models_fix_does_not_corrupt_file",
+          "start_line": 218,
+          "end_line": 233,
+          "estimated_tokens": 176
+        },
+        {
+          "file": "plugins/sqlfluff-plugin-example/src/example/rules.py",
+          "symbol": "<module>",
+          "start_line": 22,
+          "end_line": 24,
+          "estimated_tokens": 3
+        }
+      ],
+      "estimated_tokens_used": 1999
+    },
+    "E6b": {
+      "hit": false,
+      "selected_chunks": [
+        {
+          "file": "src/sqlfluff/core/rules/config_info.py",
+          "symbol": "<module>",
+          "start_line": 60,
+          "end_line": 104,
+          "estimated_tokens": 391
+        },
+        {
+          "file": "examples/01_basic_api_usage.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 50,
+          "estimated_tokens": 451
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "symbol": "core_options",
+          "start_line": 143,
+          "end_line": 186,
+          "estimated_tokens": 480
+        },
+        {
+          "file": "src/sqlfluff/rules/L019.py",
+          "symbol": "Rule_L019",
+          "start_line": 88,
+          "end_line": 128,
+          "estimated_tokens": 491
+        },
+        {
+          "file": "plugins/sqlfluff-templater-dbt/test/templater_test.py",
+          "symbol": "test__dbt_templated_models_fix_does_not_corrupt_file",
+          "start_line": 218,
+          "end_line": 233,
+          "estimated_tokens": 176
+        },
+        {
+          "file": "plugins/sqlfluff-templater-dbt/test/fixtures/dbt/templater.py",
+          "symbol": "<module>",
+          "start_line": 25,
+          "end_line": 27,
+          "estimated_tokens": 5
+        },
+        {
+          "file": "src/sqlfluff/rules/L002.py",
+          "symbol": "Rule_L002",
+          "start_line": 75,
+          "end_line": 75,
+          "estimated_tokens": 5
+        }
+      ],
+      "estimated_tokens_used": 1999
+    }
+  }
+]

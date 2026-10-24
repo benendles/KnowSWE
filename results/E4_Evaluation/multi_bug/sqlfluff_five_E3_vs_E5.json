@@ -1,0 +1,698 @@
+[
+  {
+    "id": "sqlfluff__sqlfluff-1625",
+    "base_commit": "14e1a23a3166b9a645a16de96f694c77a5d4abb7",
+    "E3": {
+      "hit": true,
+      "tokens": 2000,
+      "chunks": 14
+    },
+    "E5": {
+      "hit": true,
+      "tokens": 2000,
+      "chunks": 17,
+      "selected_chunks": [
+        {
+          "file": "test/cli/commands_test.py",
+          "symbol": "<module>",
+          "start_line": 47,
+          "end_line": 55,
+          "estimated_tokens": 74,
+          "bm25_relevance": 1.0
+        },
+        {
+          "file": "test/api/util_test.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 24,
+          "estimated_tokens": 126,
+          "bm25_relevance": 0.9675162180769861
+        },
+        {
+          "file": "src/sqlfluff/rules/L031.py",
+          "symbol": "Rule_L031",
+          "start_line": 12,
+          "end_line": 78,
+          "estimated_tokens": 499,
+          "bm25_relevance": 0.9464727225330086
+        },
+        {
+          "file": "src/sqlfluff/rules/L020.py",
+          "symbol": "Rule_L020",
+          "start_line": 9,
+          "end_line": 85,
+          "estimated_tokens": 485,
+          "bm25_relevance": 0.888449014002434
+        },
+        {
+          "file": "src/sqlfluff/rules/L044.py",
+          "symbol": "Rule_L044",
+          "start_line": 15,
+          "end_line": 70,
+          "estimated_tokens": 485,
+          "bm25_relevance": 0.867125194735818
+        },
+        {
+          "file": "examples/03_extracting_references.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 20,
+          "estimated_tokens": 136,
+          "bm25_relevance": 0.7811945977710409
+        },
+        {
+          "file": "src/sqlfluff/rules/L024.py",
+          "symbol": "Rule_L024",
+          "start_line": 9,
+          "end_line": 38,
+          "estimated_tokens": 166,
+          "bm25_relevance": 0.7730159032884351
+        },
+        {
+          "file": "test/api/info_test.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 5,
+          "estimated_tokens": 20,
+          "bm25_relevance": 0.3859880611008262
+        },
+        {
+          "file": "src/sqlfluff/core/rules/analysis/select.py",
+          "symbol": "<module>",
+          "start_line": 19,
+          "end_line": 20,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.12283859421741561
+        },
+        {
+          "file": "src/sqlfluff/core/templaters/python.py",
+          "symbol": "<module>",
+          "start_line": 145,
+          "end_line": 146,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.10448305924502777
+        },
+        {
+          "file": "src/sqlfluff/api/info.py",
+          "symbol": "<module>",
+          "start_line": 14,
+          "end_line": 15,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.0332772500860214
+        },
+        {
+          "file": "src/sqlfluff/api/simple.py",
+          "symbol": "<module>",
+          "start_line": 15,
+          "end_line": 16,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.0332772500860214
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "symbol": "<module>",
+          "start_line": 62,
+          "end_line": 63,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.0332772500860214
+        },
+        {
+          "file": "src/sqlfluff/cli/formatters.py",
+          "symbol": "<module>",
+          "start_line": 32,
+          "end_line": 33,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.0332772500860214
+        },
+        {
+          "file": "src/sqlfluff/cli/helpers.py",
+          "symbol": "<module>",
+          "start_line": 23,
+          "end_line": 24,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.0332772500860214
+        },
+        {
+          "file": "src/sqlfluff/core/config.py",
+          "symbol": "<module>",
+          "start_line": 49,
+          "end_line": 50,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.0332772500860214
+        },
+        {
+          "file": "src/sqlfluff/core/enums.py",
+          "symbol": "<module>",
+          "start_line": 14,
+          "end_line": 15,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.0332772500860214
+        }
+      ]
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-2419",
+    "base_commit": "f1dba0e1dd764ae72d67c3d5e1471cf14d3db030",
+    "E3": {
+      "hit": true,
+      "tokens": 2000,
+      "chunks": 10
+    },
+    "E5": {
+      "hit": true,
+      "tokens": 2000,
+      "chunks": 12,
+      "selected_chunks": [
+        {
+          "file": "src/sqlfluff/rules/L060.py",
+          "symbol": "Rule_L060",
+          "start_line": 11,
+          "end_line": 62,
+          "estimated_tokens": 382,
+          "bm25_relevance": 1.0
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "symbol": "<module>",
+          "start_line": 49,
+          "end_line": 57,
+          "estimated_tokens": 77,
+          "bm25_relevance": 0.4052076389209813
+        },
+        {
+          "file": "src/sqlfluff/rules/L043.py",
+          "symbol": "Rule_L043",
+          "start_line": 235,
+          "end_line": 258,
+          "estimated_tokens": 272,
+          "bm25_relevance": 0.3659551386471656
+        },
+        {
+          "file": "test/core/parser/segments_base_test.py",
+          "symbol": "test__parser__base_segments_base",
+          "start_line": 77,
+          "end_line": 107,
+          "estimated_tokens": 339,
+          "bm25_relevance": 0.3439874481294928
+        },
+        {
+          "file": "src/sqlfluff/dialects/dialect_bigquery.py",
+          "symbol": "<module>",
+          "start_line": 666,
+          "end_line": 674,
+          "estimated_tokens": 72,
+          "bm25_relevance": 0.3214398675512862
+        },
+        {
+          "file": "src/sqlfluff/rules/L042.py",
+          "symbol": "Rule_L042",
+          "start_line": 10,
+          "end_line": 74,
+          "estimated_tokens": 489,
+          "bm25_relevance": 0.32623050809735615
+        },
+        {
+          "file": "test/cli/formatters_test.py",
+          "symbol": "test__cli__formatters__violation",
+          "start_line": 25,
+          "end_line": 46,
+          "estimated_tokens": 180,
+          "bm25_relevance": 0.29293629863687043
+        },
+        {
+          "file": "plugins/sqlfluff-templater-dbt/test/templater_test.py",
+          "symbol": "_get_fixture_path",
+          "start_line": 94,
+          "end_line": 110,
+          "estimated_tokens": 185,
+          "bm25_relevance": 0.29282247754634344
+        },
+        {
+          "file": "test/rules/std_L003_test.py",
+          "symbol": "<module>",
+          "start_line": 154,
+          "end_line": 155,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.01434675607810899
+        },
+        {
+          "file": "test/rules/std_L007_test.py",
+          "symbol": "<module>",
+          "start_line": 24,
+          "end_line": 25,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.01434675607810899
+        },
+        {
+          "file": "test/rules/std_L016_L36_combo_test.py",
+          "symbol": "<module>",
+          "start_line": 19,
+          "end_line": 20,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.01434675607810899
+        },
+        {
+          "file": "test/rules/std_L020_test.py",
+          "symbol": "<module>",
+          "start_line": 17,
+          "end_line": 18,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.01434675607810899
+        }
+      ]
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1733",
+    "base_commit": "a1579a16b1d8913d9d7c7d12add374a290bcc78c",
+    "E3": {
+      "hit": false,
+      "tokens": 2000,
+      "chunks": 6
+    },
+    "E5": {
+      "hit": false,
+      "tokens": 2000,
+      "chunks": 17,
+      "selected_chunks": [
+        {
+          "file": "examples/01_basic_api_usage.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 50,
+          "estimated_tokens": 451,
+          "bm25_relevance": 1.0
+        },
+        {
+          "file": "src/sqlfluff/rules/L018.py",
+          "symbol": "Rule_L018",
+          "start_line": 10,
+          "end_line": 67,
+          "estimated_tokens": 490,
+          "bm25_relevance": 0.9547537685433481
+        },
+        {
+          "file": "test/rules/std_L019_test.py",
+          "symbol": "test__rules__std_L019_unparseable",
+          "start_line": 6,
+          "end_line": 36,
+          "estimated_tokens": 327,
+          "bm25_relevance": 0.9258744593072565
+        },
+        {
+          "file": "test/generate_parse_fixture_yml.py",
+          "symbol": "generate_parse_fixture",
+          "start_line": 10,
+          "end_line": 36,
+          "estimated_tokens": 295,
+          "bm25_relevance": 0.8775400490592016
+        },
+        {
+          "file": "src/sqlfluff/__init__.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 29,
+          "estimated_tokens": 239,
+          "bm25_relevance": 0.8078527712700356
+        },
+        {
+          "file": "src/sqlfluff/rules/L012.py",
+          "symbol": "Rule_L012",
+          "start_line": 6,
+          "end_line": 37,
+          "estimated_tokens": 176,
+          "bm25_relevance": 0.777856187083396
+        },
+        {
+          "file": "plugins/sqlfluff-plugin-example/src/example/__init__.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 1,
+          "estimated_tokens": 8,
+          "bm25_relevance": 0.44091545332417786
+        },
+        {
+          "file": "plugins/sqlfluff-plugin-example/src/example/rules.py",
+          "symbol": "<module>",
+          "start_line": 22,
+          "end_line": 24,
+          "estimated_tokens": 3,
+          "bm25_relevance": 0.4029667897956931
+        },
+        {
+          "file": "src/sqlfluff/core/rules/analysis/select.py",
+          "symbol": "<module>",
+          "start_line": 19,
+          "end_line": 20,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.2553785527344727
+        },
+        {
+          "file": "src/sqlfluff/core/templaters/python.py",
+          "symbol": "<module>",
+          "start_line": 145,
+          "end_line": 146,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.176341765646954
+        },
+        {
+          "file": "src/sqlfluff/core/config.py",
+          "symbol": "<module>",
+          "start_line": 49,
+          "end_line": 50,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.1498152866656418
+        },
+        {
+          "file": "plugins/sqlfluff-plugin-example/src/example/rules.py",
+          "symbol": "<module>",
+          "start_line": 31,
+          "end_line": 33,
+          "estimated_tokens": 3,
+          "bm25_relevance": 0.4029667897956931
+        },
+        {
+          "file": "src/sqlfluff/api/info.py",
+          "symbol": "<module>",
+          "start_line": 14,
+          "end_line": 15,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.08491474625633878
+        },
+        {
+          "file": "src/sqlfluff/api/simple.py",
+          "symbol": "<module>",
+          "start_line": 15,
+          "end_line": 16,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.08491474625633878
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "symbol": "<module>",
+          "start_line": 62,
+          "end_line": 63,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.08491474625633878
+        },
+        {
+          "file": "src/sqlfluff/cli/formatters.py",
+          "symbol": "<module>",
+          "start_line": 32,
+          "end_line": 33,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.08491474625633878
+        },
+        {
+          "file": "src/sqlfluff/cli/helpers.py",
+          "symbol": "<module>",
+          "start_line": 23,
+          "end_line": 24,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.08491474625633878
+        }
+      ]
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1517",
+    "base_commit": "304a197829f98e7425a46d872ada73176137e5ae",
+    "E3": {
+      "hit": false,
+      "tokens": 2000,
+      "chunks": 9
+    },
+    "E5": {
+      "hit": true,
+      "tokens": 2000,
+      "chunks": 21,
+      "selected_chunks": [
+        {
+          "file": "src/sqlfluff/core/linter/linter.py",
+          "symbol": "Linter",
+          "start_line": 867,
+          "end_line": 873,
+          "estimated_tokens": 82,
+          "bm25_relevance": 1.0
+        },
+        {
+          "file": "src/sqlfluff/core/linter/linted_file.py",
+          "symbol": "LintedFile",
+          "start_line": 495,
+          "end_line": 499,
+          "estimated_tokens": 52,
+          "bm25_relevance": 0.8641840652147431
+        },
+        {
+          "file": "test/cli/commands_test.py",
+          "symbol": "test__cli__command_lint_serialize_github_annotation",
+          "start_line": 655,
+          "end_line": 699,
+          "estimated_tokens": 408,
+          "bm25_relevance": 0.8845343347558474
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "symbol": "lint",
+          "start_line": 307,
+          "end_line": 368,
+          "estimated_tokens": 495,
+          "bm25_relevance": 0.8865969669523432
+        },
+        {
+          "file": "src/sqlfluff/api/simple.py",
+          "symbol": "parse",
+          "start_line": 72,
+          "end_line": 90,
+          "estimated_tokens": 174,
+          "bm25_relevance": 0.8630110481650238
+        },
+        {
+          "file": "src/sqlfluff/core/linter/linted_dir.py",
+          "symbol": "LintedDir",
+          "start_line": 132,
+          "end_line": 134,
+          "estimated_tokens": 35,
+          "bm25_relevance": 0.8518225618888408
+        },
+        {
+          "file": "src/sqlfluff/core/parser/parser.py",
+          "symbol": "Parser",
+          "start_line": 12,
+          "end_line": 33,
+          "estimated_tokens": 243,
+          "bm25_relevance": 0.8523371968296932
+        },
+        {
+          "file": "src/sqlfluff/core/linter/common.py",
+          "symbol": "NoQaDirective",
+          "start_line": 24,
+          "end_line": 29,
+          "estimated_tokens": 60,
+          "bm25_relevance": 0.8293746416292624
+        },
+        {
+          "file": "src/sqlfluff/core/file_helpers.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 7,
+          "estimated_tokens": 27,
+          "bm25_relevance": 0.8090419347100073
+        },
+        {
+          "file": "src/sqlfluff/core/config.py",
+          "symbol": "FluffConfig",
+          "start_line": 584,
+          "end_line": 616,
+          "estimated_tokens": 364,
+          "bm25_relevance": 0.8040719039405302
+        },
+        {
+          "file": "src/sqlfluff/api/info.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 9,
+          "estimated_tokens": 48,
+          "bm25_relevance": 0.7176879935292252
+        },
+        {
+          "file": "src/sqlfluff/core/plugin/lib.py",
+          "symbol": "<module>",
+          "start_line": 14,
+          "end_line": 16,
+          "estimated_tokens": 3,
+          "bm25_relevance": 0.6721392060332728
+        },
+        {
+          "file": "src/sqlfluff/core/linter/runner.py",
+          "symbol": "<module>",
+          "start_line": 89,
+          "end_line": 90,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.6641615974022854
+        },
+        {
+          "file": "src/sqlfluff/core/parser/segments/base.py",
+          "symbol": "<module>",
+          "start_line": 45,
+          "end_line": 46,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.5997377504045054
+        },
+        {
+          "file": "src/sqlfluff/core/parser/helpers.py",
+          "symbol": "<module>",
+          "start_line": 14,
+          "end_line": 15,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.5929621991749464
+        },
+        {
+          "file": "src/sqlfluff/core/parser/segments/ephemeral.py",
+          "symbol": "<module>",
+          "start_line": 45,
+          "end_line": 46,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.586859312791221
+        },
+        {
+          "file": "src/sqlfluff/core/parser/segments/meta.py",
+          "symbol": "<module>",
+          "start_line": 33,
+          "end_line": 34,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.586859312791221
+        },
+        {
+          "file": "src/sqlfluff/core/parser/segments/raw.py",
+          "symbol": "<module>",
+          "start_line": 175,
+          "end_line": 176,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.586859312791221
+        },
+        {
+          "file": "src/sqlfluff/core/parser/grammar/sequence.py",
+          "symbol": "<module>",
+          "start_line": 176,
+          "end_line": 177,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.579516118745849
+        },
+        {
+          "file": "src/sqlfluff/core/parser/grammar/base.py",
+          "symbol": "<module>",
+          "start_line": 44,
+          "end_line": 45,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.5771823903664998
+        },
+        {
+          "file": "src/sqlfluff/core/parser/context.py",
+          "symbol": "<module>",
+          "start_line": 84,
+          "end_line": 85,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.571059473861877
+        }
+      ]
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1763",
+    "base_commit": "a10057635e5b2559293a676486f0b730981f037a",
+    "E3": {
+      "hit": false,
+      "tokens": 2000,
+      "chunks": 9
+    },
+    "E5": {
+      "hit": false,
+      "tokens": 2000,
+      "chunks": 10,
+      "selected_chunks": [
+        {
+          "file": "src/sqlfluff/core/rules/config_info.py",
+          "symbol": "<module>",
+          "start_line": 60,
+          "end_line": 104,
+          "estimated_tokens": 391,
+          "bm25_relevance": 1.0
+        },
+        {
+          "file": "examples/01_basic_api_usage.py",
+          "symbol": "<module>",
+          "start_line": 1,
+          "end_line": 50,
+          "estimated_tokens": 451,
+          "bm25_relevance": 0.955463653929409
+        },
+        {
+          "file": "src/sqlfluff/cli/commands.py",
+          "symbol": "core_options",
+          "start_line": 143,
+          "end_line": 186,
+          "estimated_tokens": 480,
+          "bm25_relevance": 0.8343855900152845
+        },
+        {
+          "file": "src/sqlfluff/rules/L019.py",
+          "symbol": "Rule_L019",
+          "start_line": 88,
+          "end_line": 128,
+          "estimated_tokens": 491,
+          "bm25_relevance": 0.8210426900558804
+        },
+        {
+          "file": "plugins/sqlfluff-templater-dbt/test/templater_test.py",
+          "symbol": "test__dbt_templated_models_fix_does_not_corrupt_file",
+          "start_line": 218,
+          "end_line": 233,
+          "estimated_tokens": 176,
+          "bm25_relevance": 0.725178961573191
+        },
+        {
+          "file": "plugins/sqlfluff-templater-dbt/test/fixtures/dbt/templater.py",
+          "symbol": "<module>",
+          "start_line": 25,
+          "end_line": 27,
+          "estimated_tokens": 5,
+          "bm25_relevance": 0.26312524828658695
+        },
+        {
+          "file": "plugins/sqlfluff-templater-dbt/sqlfluff_templater_dbt/templater.py",
+          "symbol": "<module>",
+          "start_line": 44,
+          "end_line": 45,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.2615155606866815
+        },
+        {
+          "file": "src/sqlfluff/core/rules/analysis/select.py",
+          "symbol": "<module>",
+          "start_line": 19,
+          "end_line": 20,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.2490475529908829
+        },
+        {
+          "file": "src/sqlfluff/rules/L044.py",
+          "symbol": "<module>",
+          "start_line": 13,
+          "end_line": 14,
+          "estimated_tokens": 1,
+          "bm25_relevance": 0.24547439346656852
+        },
+        {
+          "file": "plugins/sqlfluff-plugin-example/src/example/rules.py",
+          "symbol": "<module>",
+          "start_line": 22,
+          "end_line": 24,
+          "estimated_tokens": 3,
+          "bm25_relevance": 0.22955685790627242
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "sqlfluff__sqlfluff-1625",
+    "E3": {
+      "covered_lines": 1,
+      "total_changed_lines": 1,
+      "coverage": 1.0
+    },
+    "E5": {
+      "covered_lines": 0,
+      "total_changed_lines": 1,
+      "coverage": 0.0
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-2419",
+    "E3": {
+      "covered_lines": 1,
+      "total_changed_lines": 1,
+      "coverage": 1.0
+    },
+    "E5": {
+      "covered_lines": 1,
+      "total_changed_lines": 1,
+      "coverage": 1.0
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1733",
+    "E3": {
+      "covered_lines": 0,
+      "total_changed_lines": 1,
+      "coverage": 0.0
+    },
+    "E5": {
+      "covered_lines": 0,
+      "total_changed_lines": 1,
+      "coverage": 0.0
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1517",
+    "E3": {
+      "covered_lines": 0,
+      "total_changed_lines": 5,
+      "coverage": 0.0
+    },
+    "E5": {
+      "covered_lines": 0,
+      "total_changed_lines": 5,
+      "coverage": 0.0
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1763",
+    "E3": {
+      "covered_lines": 0,
+      "total_changed_lines": 3,
+      "coverage": 0.0
+    },
+    "E5": {
+      "covered_lines": 0,
+      "total_changed_lines": 3,
+      "coverage": 0.0
+    }
+  }
+]

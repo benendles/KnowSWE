@@ -1,0 +1,96 @@
+[
+  {
+    "id": "sqlfluff__sqlfluff-1625",
+    "base_commit": "14e1a23a3166b9a645a16de96f694c77a5d4abb7",
+    "E0": {
+      "selected_files": [
+        "src/sqlfluff/rules/L028.py",
+        "test/rules/std_L020_test.py",
+        "examples/01_basic_api_usage.py"
+      ],
+      "faulty_files_found": [],
+      "hit": false,
+      "recall": 0.0,
+      "estimated_tokens_used": 1997,
+      "remaining_budget": 3
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-2419",
+    "base_commit": "f1dba0e1dd764ae72d67c3d5e1471cf14d3db030",
+    "E0": {
+      "selected_files": [
+        "src/sqlfluff/rules/L060.py",
+        "src/sqlfluff/core/errors.py",
+        "src/sqlfluff/dialects/__init__.py",
+        "src/sqlfluff/core/rules/analysis/__init__.py",
+        "test/api/__init__.py"
+      ],
+      "faulty_files_found": [
+        "src/sqlfluff/rules/L060.py"
+      ],
+      "hit": true,
+      "recall": 1.0,
+      "estimated_tokens_used": 2000,
+      "remaining_budget": 0
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1733",
+    "base_commit": "a1579a16b1d8913d9d7c7d12add374a290bcc78c",
+    "E0": {
+      "selected_files": [
+        "examples/01_basic_api_usage.py",
+        "test/dialects/snowflake_test.py",
+        "test/rules/std_L019_test.py",
+        "test/api/util_test.py",
+        "examples/03_extracting_references.py",
+        "src/sqlfluff/core/file_helpers.py",
+        "test/fixtures/templater/jinja_j_libraries/libs/foo.py",
+        "plugins/sqlfluff-plugin-example/src/example/__init__.py",
+        "src/sqlfluff/rules/__init__.py"
+      ],
+      "faulty_files_found": [],
+      "hit": false,
+      "recall": 0.0,
+      "estimated_tokens_used": 1995,
+      "remaining_budget": 5
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1517",
+    "base_commit": "304a197829f98e7425a46d872ada73176137e5ae",
+    "E0": {
+      "selected_files": [
+        "setup.py",
+        "src/sqlfluff/core/linter/common.py",
+        "test/api/classes_test.py",
+        "src/sqlfluff/__main__.py",
+        "src/sqlfluff/cli/__init__.py"
+      ],
+      "faulty_files_found": [],
+      "hit": false,
+      "recall": 0.0,
+      "estimated_tokens_used": 1995,
+      "remaining_budget": 5
+    }
+  },
+  {
+    "id": "sqlfluff__sqlfluff-1763",
+    "base_commit": "a10057635e5b2559293a676486f0b730981f037a",
+    "E0": {
+      "selected_files": [
+        "src/sqlfluff/core/rules/config_info.py",
+        "src/sqlfluff/rules/L011.py",
+        "src/sqlfluff/api/__init__.py",
+        "plugins/sqlfluff-templater-dbt/test/__init__.py",
+        "src/sqlfluff/core/rules/analysis/__init__.py"
+      ],
+      "faulty_files_found": [],
+      "hit": false,
+      "recall": 0.0,
+      "estimated_tokens_used": 1995,
+      "remaining_budget": 5
+    }
+  }
+]

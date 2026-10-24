@@ -1,0 +1,171 @@
+[
+  {
+    "case_id": "sqlfluff__sqlfluff-1625",
+    "budget": 2000,
+    "chunk_size": 500,
+    "total_indexed_chunks": 2481,
+    "selected_chunks": [
+      {
+        "file": "test/cli/commands_test.py",
+        "symbol": "<module>",
+        "start_line": 47,
+        "end_line": 55,
+        "estimated_tokens": 74,
+        "bm25_relevance": 1.0
+      },
+      {
+        "file": "test/api/util_test.py",
+        "symbol": "<module>",
+        "start_line": 1,
+        "end_line": 24,
+        "estimated_tokens": 126,
+        "bm25_relevance": 0.9675162180769861
+      },
+      {
+        "file": "src/sqlfluff/rules/L031.py",
+        "symbol": "Rule_L031",
+        "start_line": 12,
+        "end_line": 78,
+        "estimated_tokens": 499,
+        "bm25_relevance": 0.9464727225330086
+      },
+      {
+        "file": "src/sqlfluff/rules/L020.py",
+        "symbol": "Rule_L020",
+        "start_line": 9,
+        "end_line": 85,
+        "estimated_tokens": 485,
+        "bm25_relevance": 0.888449014002434
+      },
+      {
+        "file": "src/sqlfluff/rules/L044.py",
+        "symbol": "Rule_L044",
+        "start_line": 15,
+        "end_line": 70,
+        "estimated_tokens": 485,
+        "bm25_relevance": 0.867125194735818
+      },
+      {
+        "file": "examples/03_extracting_references.py",
+        "symbol": "<module>",
+        "start_line": 1,
+        "end_line": 20,
+        "estimated_tokens": 136,
+        "bm25_relevance": 0.7811945977710409
+      },
+      {
+        "file": "src/sqlfluff/rules/L024.py",
+        "symbol": "Rule_L024",
+        "start_line": 9,
+        "end_line": 38,
+        "estimated_tokens": 166,
+        "bm25_relevance": 0.7730159032884351
+      },
+      {
+        "file": "test/api/info_test.py",
+        "symbol": "<module>",
+        "start_line": 1,
+        "end_line": 5,
+        "estimated_tokens": 20,
+        "bm25_relevance": 0.3859880611008262
+      },
+      {
+        "file": "src/sqlfluff/core/rules/analysis/select.py",
+        "symbol": "<module>",
+        "start_line": 19,
+        "end_line": 20,
+        "estimated_tokens": 1,
+        "bm25_relevance": 0.12283859421741561
+      },
+      {
+        "file": "src/sqlfluff/core/templaters/python.py",
+        "symbol": "<module>",
+        "start_line": 145,
+        "end_line": 146,
+        "estimated_tokens": 1,
+        "bm25_relevance": 0.10448305924502777
+      },
+      {
+        "file": "src/sqlfluff/api/info.py",
+        "symbol": "<module>",
+        "start_line": 14,
+        "end_line": 15,
+        "estimated_tokens": 1,
+        "bm25_relevance": 0.0332772500860214
+      },
+      {
+        "file": "src/sqlfluff/api/simple.py",
+        "symbol": "<module>",
+        "start_line": 15,
+        "end_line": 16,
+        "estimated_tokens": 1,
+        "bm25_relevance": 0.0332772500860214
+      },
+      {
+        "file": "src/sqlfluff/cli/commands.py",
+        "symbol": "<module>",
+        "start_line": 62,
+        "end_line": 63,
+        "estimated_tokens": 1,
+        "bm25_relevance": 0.0332772500860214
+      },
+      {
+        "file": "src/sqlfluff/cli/formatters.py",
+        "symbol": "<module>",
+        "start_line": 32,
+        "end_line": 33,
+        "estimated_tokens": 1,
+        "bm25_relevance": 0.0332772500860214
+      },
+      {
+        "file": "src/sqlfluff/cli/helpers.py",
+        "symbol": "<module>",
+        "start_line": 23,
+        "end_line": 24,
+        "estimated_tokens": 1,
+        "bm25_relevance": 0.0332772500860214
+      },
+      {
+        "file": "src/sqlfluff/core/config.py",
+        "symbol": "<module>",
+        "start_line": 49,
+        "end_line": 50,
+        "estimated_tokens": 1,
+        "bm25_relevance": 0.0332772500860214
+      },
+      {
+        "file": "src/sqlfluff/core/enums.py",
+        "symbol": "<module>",
+        "start_line": 14,
+        "end_line": 15,
+        "estimated_tokens": 1,
+        "bm25_relevance": 0.0332772500860214
+      }
+    ],
+    "selected_files": [
+      "examples/03_extracting_references.py",
+      "src/sqlfluff/api/info.py",
+      "src/sqlfluff/api/simple.py",
+      "src/sqlfluff/cli/commands.py",
+      "src/sqlfluff/cli/formatters.py",
+      "src/sqlfluff/cli/helpers.py",
+      "src/sqlfluff/core/config.py",
+      "src/sqlfluff/core/enums.py",
+      "src/sqlfluff/core/rules/analysis/select.py",
+      "src/sqlfluff/core/templaters/python.py",
+      "src/sqlfluff/rules/L020.py",
+      "src/sqlfluff/rules/L024.py",
+      "src/sqlfluff/rules/L031.py",
+      "src/sqlfluff/rules/L044.py",
+      "test/api/info_test.py",
+      "test/api/util_test.py",
+      "test/cli/commands_test.py"
+    ],
+    "hit": true,
+    "recall": 1.0,
+    "estimated_tokens_used": 2000,
+    "reference_files": [
+      "src/sqlfluff/rules/L031.py"
+    ]
+  }
+]
