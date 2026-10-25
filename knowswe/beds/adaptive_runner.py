@@ -34,12 +34,31 @@ def investigate_repository(
         if selected is None:
             break
 
-        observation = environment.execute(selected)
+        controller.begin_action(selected)
 
-        controller.observe(
-            selected,
-            observation.content,
-            discovered_actions=observation.discovered_actions,
-        )
+        try:
+            observation = environment.execute(selected)
+
+            actual_cost = max(
+                1,
+                (len(observation.content) + 3) // 4,
+            )
+
+            if actual_cost > controller.state.remaining_budget:
+                controller.state.stop_reason = (
+                    "observation_exceeds_remaining_budget"
+                )
+                controller.cancel_action()
+                break
+
+            controller.observe(
+                selected,
+                observation.content,
+                discovered_actions=observation.discovered_actions,
+                actual_cost=actual_cost,
+            )
+        except Exception:
+            controller.cancel_action()
+            raise
 
     return controller.state

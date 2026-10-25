@@ -29,6 +29,9 @@ class InvestigationState:
 
     history: list[dict] = field(default_factory=list)
 
+    active_action: tuple[str, str] | None = None
+    stop_reason: str | None = None
+
     @property
     def spent_budget(self):
         return self.initial_budget - self.remaining_budget

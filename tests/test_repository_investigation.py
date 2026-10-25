@@ -1,5 +1,6 @@
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 from knowswe.beds.adaptive_actions import (
@@ -56,6 +57,7 @@ class TestRepositoryInvestigation(unittest.TestCase):
                 "main.py"
             )
 
+            controller.begin_action(first)
             observation = environment.execute(first)
 
             discovered = {
@@ -83,6 +85,7 @@ class TestRepositoryInvestigation(unittest.TestCase):
                 "helper.py"
             )
 
+            controller.begin_action(second)
             second_observation = environment.execute(second)
 
             controller.observe(
@@ -105,6 +108,63 @@ class TestRepositoryInvestigation(unittest.TestCase):
                 controller.state.spent_budget,
                 1000
             )
+
+
+    def test_budget_overrun_stops_gracefully(self):
+        from knowswe.beds.adaptive_runner import (
+            investigate_repository,
+        )
+        from knowswe.beds.repository_environment import (
+            RepositoryObservation,
+        )
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+
+            (root / "main.py").write_text(
+                "def process():\\n"
+                "    return 42\\n"
+            )
+
+            underestimated = InvestigationAction(
+                action_type=ActionType.INSPECT,
+                target="main.py",
+                estimated_cost=1,
+                relevance=1.0,
+                diagnostic_value=1.0,
+            )
+
+            oversized = RepositoryObservation(
+                content="x" * 400,
+                discovered_actions=[],
+            )
+
+            with patch.object(
+                RepositoryInvestigationEnvironment,
+                "initial_actions",
+                return_value=[underestimated],
+            ), patch.object(
+                RepositoryInvestigationEnvironment,
+                "execute",
+                return_value=oversized,
+            ):
+                state = investigate_repository(
+                    repository_path=directory,
+                    bug_report="process fails",
+                    budget=10,
+                    top_k=1,
+                    max_steps=3,
+                )
+
+            self.assertEqual(
+                state.stop_reason,
+                "observation_exceeds_remaining_budget",
+            )
+
+            self.assertEqual(state.remaining_budget, 10)
+            self.assertEqual(len(state.evidence), 0)
+            self.assertEqual(len(state.history), 0)
+            self.assertIsNone(state.active_action)
 
 
 if __name__ == "__main__":

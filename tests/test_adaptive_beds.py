@@ -37,6 +37,7 @@ class TestAdaptiveBEDS(unittest.TestCase):
 
         first = controller.select_next()
 
+        controller.begin_action(first)
         controller.observe(first, "Evidence")
 
         self.assertLessEqual(
@@ -57,6 +58,7 @@ class TestAdaptiveBEDS(unittest.TestCase):
 
         selected = controller.select_next()
 
+        controller.begin_action(selected)
         controller.observe(selected, "Evidence")
 
         self.assertNotIn(
@@ -107,6 +109,8 @@ class TestAdaptiveBEDS(unittest.TestCase):
             kind=ActionType.FOLLOW_DEPENDENCY,
         )
 
+        controller.begin_action(selected)
+
         controller.observe(
             selected,
             "entry.py calls dependency.py",
@@ -127,14 +131,78 @@ class TestAdaptiveBEDS(unittest.TestCase):
 
         controller.add_actions([candidate])
 
+        selected = controller.select_next()
+        controller.begin_action(selected)
+
         controller.observe(
-            controller.select_next(),
+            selected,
             "Evidence",
         )
 
         self.assertTrue(
             controller.should_stop()
         )
+
+
+    def test_unauthorized_observation_rejected(self):
+        controller = AdaptiveBEDSController(budget=100)
+
+        candidate = action("a.py", 20)
+
+        controller.add_actions([candidate])
+
+        with self.assertRaises(ValueError):
+            controller.observe(candidate, "Evidence")
+
+        self.assertEqual(
+            controller.state.remaining_budget,
+            100,
+        )
+
+    def test_actual_cost_is_recorded(self):
+        controller = AdaptiveBEDSController(budget=100)
+
+        candidate = action("a.py", 20)
+
+        controller.add_actions([candidate])
+        controller.begin_action(candidate)
+
+        controller.observe(
+            candidate,
+            "Evidence",
+            actual_cost=35,
+        )
+
+        self.assertEqual(
+            controller.state.spent_budget,
+            35,
+        )
+
+
+    def test_same_file_not_inspected_twice(self):
+        controller = AdaptiveBEDSController(budget=100)
+
+        first = action(
+            "helper.py",
+            20,
+            kind=ActionType.INSPECT,
+        )
+
+        duplicate = action(
+            "helper.py",
+            20,
+            kind=ActionType.FOLLOW_DEPENDENCY,
+        )
+
+        controller.add_actions([first])
+        controller.begin_action(first)
+        controller.observe(first, "Evidence")
+
+        controller.add_actions([duplicate])
+
+        self.assertIsNone(controller.select_next())
+
+        self.assertEqual(len(controller.state.history), 1)
 
 
 if __name__ == "__main__":

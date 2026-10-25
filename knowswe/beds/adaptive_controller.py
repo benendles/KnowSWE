@@ -54,6 +54,20 @@ class AdaptiveBEDSController:
             if action.key in self.state.completed_actions:
                 continue
 
+            inspected_targets = {
+                entry["target"]
+                for entry in self.state.history
+            }
+
+            if action.target in inspected_targets:
+                continue
+
+            if any(
+                existing.target == action.target
+                for existing in self.state.pending_actions.values()
+            ):
+                continue
+
             self.state.pending_actions[action.key] = action
 
     def score(self, action):
@@ -95,12 +109,36 @@ class AdaptiveBEDSController:
             ),
         )
 
+    def begin_action(self, action: InvestigationAction):
+        if self.state.active_action is not None:
+            raise RuntimeError(
+                "Another investigation action is active"
+            )
+
+        selected = self.select_next()
+
+        if selected is None or selected.key != action.key:
+            raise ValueError(
+                "Action is not the next selected action"
+            )
+
+        self.state.active_action = action.key
+
+    def cancel_action(self):
+        self.state.active_action = None
+
     def observe(
         self,
         action: InvestigationAction,
         content: str,
         discovered_actions=None,
+        actual_cost=None,
     ):
+        if self.state.active_action != action.key:
+            raise ValueError(
+                "Action has not been authorized"
+            )
+
         if action.key not in self.state.pending_actions:
             raise ValueError(
                 "Action was not registered"
@@ -111,12 +149,21 @@ class AdaptiveBEDSController:
                 "Action already completed"
             )
 
-        if action.estimated_cost > self.state.remaining_budget:
+        if actual_cost is None:
+            actual_cost = action.estimated_cost
+
+        if actual_cost <= 0:
             raise ValueError(
-                "Insufficient investigation budget"
+                "Actual cost must be positive"
             )
 
-        self.state.remaining_budget -= action.estimated_cost
+        if actual_cost > self.state.remaining_budget:
+            raise ValueError(
+                "Actual observation exceeds remaining budget"
+            )
+
+        self.state.remaining_budget -= actual_cost
+        self.state.active_action = None
 
         self.state.completed_actions.add(action.key)
 
@@ -141,7 +188,7 @@ class AdaptiveBEDSController:
             "step": len(self.state.history) + 1,
             "action": action.action_type.value,
             "target": action.target,
-            "cost": action.estimated_cost,
+            "cost": actual_cost,
             "remaining_budget": self.state.remaining_budget,
             "new_actions": len(discovered_actions),
         })
