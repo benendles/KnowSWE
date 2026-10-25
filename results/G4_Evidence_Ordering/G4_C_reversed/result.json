@@ -1,0 +1,77 @@
+{
+  "experiment": "G4_C_reversed",
+  "case_id": "sqlfluff__sqlfluff-1625",
+  "model": "gemma-3-1b-it-Q4_K_M.gguf",
+  "settings": {
+    "context_size": 8192,
+    "max_generation_tokens": 256,
+    "temperature": 0,
+    "seed": 42,
+    "threads": 2
+  },
+  "prompt_sha256": "a65b2042a1eb3cf15f63e0dc303bc9c42aced6b7d380bad6422b133395284b5c",
+  "evidence_order": [
+    {
+      "original_rank": 14,
+      "file": "src/sqlfluff/api/simple.py"
+    },
+    {
+      "original_rank": 13,
+      "file": "src/sqlfluff/api/info.py"
+    },
+    {
+      "original_rank": 12,
+      "file": "src/sqlfluff/core/templaters/python.py"
+    },
+    {
+      "original_rank": 11,
+      "file": "src/sqlfluff/core/rules/analysis/select.py"
+    },
+    {
+      "original_rank": 10,
+      "file": "src/sqlfluff/core/rules/analysis/select.py"
+    },
+    {
+      "original_rank": 9,
+      "file": "src/sqlfluff/core/rules/analysis/select.py"
+    },
+    {
+      "original_rank": 8,
+      "file": "src/sqlfluff/core/rules/analysis/select.py"
+    },
+    {
+      "original_rank": 7,
+      "file": "test/api/info_test.py"
+    },
+    {
+      "original_rank": 6,
+      "file": "test/cli/commands_test.py"
+    },
+    {
+      "original_rank": 5,
+      "file": "src/sqlfluff/rules/L020.py"
+    },
+    {
+      "original_rank": 4,
+      "file": "src/sqlfluff/rules/L031.py"
+    },
+    {
+      "original_rank": 3,
+      "file": "src/sqlfluff/rules/L031.py"
+    },
+    {
+      "original_rank": 2,
+      "file": "test/api/util_test.py"
+    },
+    {
+      "original_rank": 1,
+      "file": "test/cli/commands_test.py"
+    }
+  ],
+  "prediction": {
+    "predicted_file": "src/sqlfluff/api/simple.py",
+    "predicted_symbol": "L031",
+    "generated_answer": "FAULTY_FILE: src/sqlfluff/api/simple.py\nFAULTY_SYMBOL: L031\nREASON: The code triggers L031 when no join condition is present, but the query with the alias is passed."
+  },
+  "timestamp_utc": "2026-10-25T06:06:56.208009+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "case_id": "sqlfluff__sqlfluff-1625",
+  "timestamp_utc": "2026-10-25T05:41:46.560050+00:00",
+  "base_commit": "14e1a23a3166b9a645a16de96f694c77a5d4abb7",
+  "model": "gemma-3-1b-it-Q4_K_M.gguf",
+  "model_sha256": "12bf0fff8815d5f73a3c9b586bd8fee8e7b248c935de70dec367679873d0f29d",
+  "retrieval": "E3_AST_chunk_BM25",
+  "retrieved_chunks": 14,
+  "evidence_budget_estimated": 2000,
+  "context_size": 4096,
+  "temperature": 0,
+  "seed": 42,
+  "prompt_sha256": "2086b8cc8493d1fe5a86d30044a513acfa620aad81e32ab32b97ad442667aca5",
+  "prediction": {
+    "predicted_file": null,
+    "predicted_symbol": null
+  },
+  "inference": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+}

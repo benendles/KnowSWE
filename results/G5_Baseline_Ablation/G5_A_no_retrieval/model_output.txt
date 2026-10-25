@@ -1,0 +1,72 @@
+User:
+You are a Python repository debugging assistant.
+
+Your task is fault localization, not code repair.
+
+Read the bug report and the retrieved repository evidence.
+
+Identify the most likely faulty source file and function or class.
+
+Do not invent source files that are not in the evidence.
+
+If the evidence is insufficient, say so.
+
+BUG REPORT:
+TSQL - L031 incorrectly triggers "Avoid using aliases in join condition" when no join present
+## Expected Behaviour
+
+Both of these queries should pass, the only difference is the addition of a table alias 'a':
+
+1/ no alias
+
+```
+SELECT [hello]
+FROM
+    mytable
+```
+
+2/ same query with alias
+
+```
+SELECT a.[hello]
+FROM
+    mytable AS a
+```
+
+## Observed Behaviour
+
+1/ passes
+2/ fails with: L031: Avoid using aliases in join condition.
+
+But there is no join condition :-)
+
+## Steps to Reproduce
+
+Lint queries above
+
+## Dialect
+
+TSQL
+
+## Version
+
+sqlfluff 0.6.9
+Python 3.6.9
+
+## Configuration
+
+N/A
+
+
+RETRIEVED SOURCE EVIDENCE:
+Return your answer using exactly this format:
+
+FAULTY_FILE: <repository-relative path>
+FAULTY_SYMBOL: <function or class name>
+REASON: <brief explanation>
+
+Assistant:
+FAULTY_FILE: my_query_file.py
+FAULTY_SYMBOL: my_query_file.sqlfluff_analysis
+REASON: The issue is triggered by the absence of an alias in the join condition, but the query is successfully executed without a join. The linting tool is incorrectly flagging this as a violation of the 'Avoid using aliases in join condition' rule.
+

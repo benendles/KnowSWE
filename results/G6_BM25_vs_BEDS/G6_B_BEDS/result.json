@@ -1,0 +1,14 @@
+{
+  "case_id": "sqlfluff__sqlfluff-1625",
+  "model": "gemma-3-1b-it-Q4_K_M.gguf",
+  "context_size": 8192,
+  "temperature": 0,
+  "seed": 42,
+  "max_generation_tokens": 256,
+  "prompt_sha256": "fd5543659e5a324e9fc1d501b0c0e126c2c1ac2c27249dfba752209e8e559020",
+  "prediction": {
+    "predicted_file": "test/cli/commands_test.py",
+    "predicted_symbol": "L031",
+    "generated_answer": "FAULTY_FILE: test/cli/commands_test.py\nFAULTY_SYMBOL: L031\nREASON: The code triggers \"Avoid using aliases in join condition\" because the query uses aliases, which is not allowed in this case."
+  }
+}

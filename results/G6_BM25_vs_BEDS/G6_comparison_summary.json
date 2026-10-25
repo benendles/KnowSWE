@@ -1,0 +1,20 @@
+{
+  "experiment": "G6",
+  "case_id": "sqlfluff__sqlfluff-1625",
+  "model": "Gemma 3 1B Q4_K_M",
+  "correct_file": "src/sqlfluff/rules/L031.py",
+  "bm25": {
+    "retrieved_chunks": 14,
+    "unique_files": 9,
+    "predicted_file": "test/cli/commands_test.py",
+    "correct": false
+  },
+  "beds": {
+    "retrieved_chunks": 17,
+    "unique_files": 17,
+    "predicted_file": "test/cli/commands_test.py",
+    "correct": false,
+    "prompt_sha256": "fd5543659e5a324e9fc1d501b0c0e126c2c1ac2c27249dfba752209e8e559020"
+  },
+  "conclusion": "Both retrieval methods included the correct implementation file, but Gemma predicted the same incorrect test file."
+}

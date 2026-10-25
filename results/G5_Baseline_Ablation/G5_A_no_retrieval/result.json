@@ -1,0 +1,14 @@
+{
+  "case_id": "sqlfluff__sqlfluff-1625",
+  "model": "gemma-3-1b-it-Q4_K_M.gguf",
+  "context_size": 8192,
+  "temperature": 0,
+  "seed": 42,
+  "max_generation_tokens": 256,
+  "prompt_sha256": "19f7115fec51252813fb5d71adc966a5e682929bbf63ad1fdc15bd2baee295ca",
+  "prediction": {
+    "predicted_file": "my_query_file.py",
+    "predicted_symbol": "my_query_file.sqlfluff_analysis",
+    "generated_answer": "FAULTY_FILE: my_query_file.py\nFAULTY_SYMBOL: my_query_file.sqlfluff_analysis\nREASON: The issue is triggered by the absence of an alias in the join condition, but the query is successfully executed without a join. The linting tool is incorrectly flagging this as a violation of the 'Avoid using aliases in join condition' rule."
+  }
+}

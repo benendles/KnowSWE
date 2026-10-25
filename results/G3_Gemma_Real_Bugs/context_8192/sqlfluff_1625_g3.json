@@ -1,0 +1,15 @@
+{
+  "case_id": "sqlfluff__sqlfluff-1625",
+  "model": "gemma-3-1b-it-Q4_K_M.gguf",
+  "retrieval_method": "E3_AST_chunk_BM25",
+  "context_size": 8192,
+  "max_generation_tokens": 256,
+  "temperature": 0,
+  "seed": 42,
+  "prompt_sha256": "2086b8cc8493d1fe5a86d30044a513acfa620aad81e32ab32b97ad442667aca5",
+  "prediction": {
+    "predicted_file": "test/cli/commands_test.py",
+    "predicted_symbol": "L031",
+    "generated_answer": "FAULTY_FILE: test/cli/commands_test.py\nFAULTY_SYMBOL: L031\nREASON: The test case fails with L031, but the expected behavior is to pass. The provided test case demonstrates a failure, indicating a problem with the rule."
+  }
+}

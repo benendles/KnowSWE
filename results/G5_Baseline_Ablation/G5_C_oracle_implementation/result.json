@@ -1,0 +1,14 @@
+{
+  "case_id": "sqlfluff__sqlfluff-1625",
+  "model": "gemma-3-1b-it-Q4_K_M.gguf",
+  "context_size": 8192,
+  "temperature": 0,
+  "seed": 42,
+  "max_generation_tokens": 256,
+  "prompt_sha256": "b5e3b40e0ef5cde21e48317aa133f2221a42974957d336bb6e4c89fd05ca6de8",
+  "prediction": {
+    "predicted_file": "src/sqlfluff/rules/L031.py",
+    "predicted_symbol": "Rule_L031",
+    "generated_answer": "FAULTY_FILE: src/sqlfluff/rules/L031.py\nFAULTY_SYMBOL: Rule_L031\nREASON: The code attempts to identify aliases in join conditions, but the logic for doing so is flawed and produces incorrect results. The code iterates through `select_clause` and attempts to find aliases, but the logic for determining if an alias is used is not correct."
+  }
+}

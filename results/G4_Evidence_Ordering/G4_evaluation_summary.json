@@ -1,0 +1,80 @@
+{
+  "experiment": "G4_Evidence_Ordering",
+  "case_id": "sqlfluff__sqlfluff-1625",
+  "reference_files": [
+    "src/sqlfluff/rules/L031.py"
+  ],
+  "model": "gemma-3-1b-it-Q4_K_M.gguf",
+  "context_size": 8192,
+  "evaluated_at_utc": "2026-10-25T06:10:33.237582+00:00",
+  "configurations": [
+    {
+      "name": "G4_A_original",
+      "predicted_file": "test/cli/commands_test.py",
+      "file_hit": false,
+      "prompt_sha256": "b83288114db82a0a035985f14522b40f2888a24eee8b6ef9dc08d1a418ebd81d",
+      "evidence_order": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "name": "G4_B_implementation_first",
+      "predicted_file": "test/cli/commands_test.py",
+      "file_hit": false,
+      "prompt_sha256": "d01c20b80066f74b64b33be9f3f68f385eb0a51a03a91e5d6854430cc3b99a10",
+      "evidence_order": [
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        1,
+        2,
+        6,
+        7
+      ]
+    },
+    {
+      "name": "G4_C_reversed",
+      "predicted_file": "src/sqlfluff/api/simple.py",
+      "file_hit": false,
+      "prompt_sha256": "a65b2042a1eb3cf15f63e0dc303bc9c42aced6b7d380bad6422b133395284b5c",
+      "evidence_order": [
+        14,
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ]
+    }
+  ],
+  "correct_configurations": 0,
+  "total_configurations": 3
+}

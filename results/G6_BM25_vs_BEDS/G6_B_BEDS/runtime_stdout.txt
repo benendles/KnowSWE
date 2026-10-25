@@ -1,0 +1,51 @@
+
+
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b11869-d327bf1f0
+model      : /opt/knowswe/models/gemma3-1b/gemma-3-1b-it-Q4_K_M.gguf
+ftype      : Q4_K - Medium
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> You are a Python repository debugging assistant.
+
+Your task is fault localization, not code repair.
+
+Read the bug report and the retrieved repository evidence.
+
+Identify the most likely faulty source file and function or class.
+
+Do not invent source files that are not in the evidence.
+
+If the evidence is insufficient, say so.
+
+BUG REPORT:
+TSQL - L031 incorrectly triggers "Avoid using aliases in join condition" when no join present
+## Expected Behaviour
+
+Both of these queries should pass, the onl ... (truncated)
+FAULTY_FILE: test/cli/commands_test.py
+FAULTY_SYMBOL: L031
+REASON: The code triggers "Avoid using aliases in join condition" because the query uses aliases, which is not allowed in this case.
+
+[ Prompt: 109.1 t/s | Generation: 20.8 t/s ]
+
+
+Exiting...

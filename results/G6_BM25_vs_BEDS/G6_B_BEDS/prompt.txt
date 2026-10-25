@@ -1,0 +1,490 @@
+You are a Python repository debugging assistant.
+
+Your task is fault localization, not code repair.
+
+Read the bug report and the retrieved repository evidence.
+
+Identify the most likely faulty source file and function or class.
+
+Do not invent source files that are not in the evidence.
+
+If the evidence is insufficient, say so.
+
+BUG REPORT:
+TSQL - L031 incorrectly triggers "Avoid using aliases in join condition" when no join present
+## Expected Behaviour
+
+Both of these queries should pass, the only difference is the addition of a table alias 'a':
+
+1/ no alias
+
+```
+SELECT [hello]
+FROM
+    mytable
+```
+
+2/ same query with alias
+
+```
+SELECT a.[hello]
+FROM
+    mytable AS a
+```
+
+## Observed Behaviour
+
+1/ passes
+2/ fails with: L031: Avoid using aliases in join condition.
+
+But there is no join condition :-)
+
+## Steps to Reproduce
+
+Lint queries above
+
+## Dialect
+
+TSQL
+
+## Version
+
+sqlfluff 0.6.9
+Python 3.6.9
+
+## Configuration
+
+N/A
+
+
+RETRIEVED SOURCE EVIDENCE:
+Evidence 1
+File: test/cli/commands_test.py
+Symbol: <module>
+Lines: 47-55
+```python
+
+
+expected_output = """== [test/fixtures/linter/indentation_error_simple.sql] FAIL
+L:   2 | P:   4 | L003 | Indentation not hanging or a multiple of 4 spaces
+L:   5 | P:  10 | L010 | Keywords must be consistently upper case.
+L:   5 | P:  13 | L031 | Avoid using aliases in join condition
+"""
+
+
+```
+
+Evidence 2
+File: test/api/util_test.py
+Symbol: <module>
+Lines: 1-24
+```python
+"""Test using sqlfluff to extract elements of queries."""
+
+import pytest
+
+import sqlfluff
+
+my_bad_query = "SeLEct  *, 1, blah as  fOO  from myTable"
+
+query_with_ctes = """
+WITH foo AS (SELECT * FROM bar.bar),
+baz AS (SELECT * FROM bap)
+SELECT * FROM foo
+INNER JOIN baz USING (user_id)
+INNER JOIN ban USING (user_id)
+"""
+
+
+@pytest.mark.parametrize(
+    "sql,table_refs,dialect",
+    [
+        (my_bad_query, {"myTable"}, None),
+        (query_with_ctes, {"bar.bar", "bap", "ban"}, "snowflake"),
+    ],
+)
+```
+
+Evidence 3
+File: src/sqlfluff/rules/L031.py
+Symbol: Rule_L031
+Lines: 12-78
+```python
+class Rule_L031(BaseRule):
+    """Avoid table aliases in from clauses and join conditions.
+
+    | **Anti-pattern**
+    | In this example, alias 'o' is used for the orders table, and 'c' is used for 'customers' table.
+
+    .. code-block:: sql
+
+        SELECT
+            COUNT(o.customer_id) as order_amount,
+            c.name
+        FROM orders as o
+        JOIN customers as c on o.id = c.user_id
+
+
+    | **Best practice**
+    |  Avoid aliases.
+
+    .. code-block:: sql
+
+        SELECT
+            COUNT(orders.customer_id) as order_amount,
+            customers.name
+        FROM orders
+        JOIN customers on orders.id = customers.user_id
+
+        -- Self-join will not raise issue
+
+        SELECT
+            table.a,
+            table_alias.b,
+        FROM
+            table
+            LEFT JOIN table AS table_alias ON table.foreign_key = table_alias.foreign_key
+
+    """
+
+    def _eval(self, segment, **kwargs):
+        """Identify aliases in from clause and join conditions.
+
+        Find base table, table expressions in join, and other expressions in select clause
+        and decide if it's needed to report them.
+        """
+        if segment.is_type("select_statement"):
+            # A buffer for all table expressions in join conditions
+            from_expression_elements = []
+            column_reference_segments = []
+
+            from_clause_segment = segment.get_child("from_clause")
+
+            if not from_clause_segment:
+                return None
+
+            from_expression = from_clause_segment.get_child("from_expression")
+            from_expression_element = None
+            if from_expression:
+                from_expression_element = from_expression.get_child(
+                    "from_expression_element"
+                )
+
+            if not from_expression_element:
+                return None
+            from_expression_element = from_expression_element.get_child(
+                "table_expression"
+            )
+
+            # Find base table
+```
+
+Evidence 4
+File: src/sqlfluff/rules/L020.py
+Symbol: Rule_L020
+Lines: 9-85
+```python
+class Rule_L020(BaseRule):
+    """Table aliases should be unique within each clause.
+
+    | **Anti-pattern**
+    | In this example, the alias 't' is reused for two different ables:
+
+    .. code-block:: sql
+
+        SELECT
+            t.a,
+            t.b
+        FROM foo AS t, bar AS t
+
+        -- this can also happen when using schemas where the implicit alias is the table name:
+
+        SELECT
+            a,
+            b
+        FROM
+            2020.foo,
+            2021.foo
+
+    | **Best practice**
+    | Make all tables have a unique alias
+
+    .. code-block:: sql
+
+        SELECT
+            f.a,
+            b.b
+        FROM foo AS f, bar AS b
+
+        -- Also use explicit alias's when referencing two tables with same name from two different schemas
+
+        SELECT
+            f1.a,
+            f2.b
+        FROM
+            2020.foo AS f1,
+            2021.foo AS f2
+
+    """
+
+    def _lint_references_and_aliases(
+        self,
+        table_aliases,
+        standalone_aliases,
+        references,
+        col_aliases,
+        using_cols,
+        parent_select,
+    ):
+        """Check whether any aliases are duplicates.
+
+        NB: Subclasses of this error should override this function.
+
+        """
+        # Are any of the aliases the same?
+        duplicate = set()
+        for a1, a2 in itertools.combinations(table_aliases, 2):
+            # Compare the strings
+            if a1.ref_str == a2.ref_str and a1.ref_str:
+                duplicate.add(a2)
+        if duplicate:
+            return [
+                LintResult(
+                    # Reference the element, not the string.
+                    anchor=aliases.segment,
+                    description=(
+                        "Duplicate table alias {!r}. Table " "aliases should be unique."
+                    ).format(aliases.ref_str),
+                )
+                for aliases in duplicate
+            ]
+        else:
+            return None
+
+```
+
+Evidence 5
+File: src/sqlfluff/rules/L044.py
+Symbol: Rule_L044
+Lines: 15-70
+```python
+class Rule_L044(BaseRule):
+    """Query produces an unknown number of result columns.
+
+    | **Anti-pattern**
+    | Querying all columns using `*` produces a query result where the number
+    | or ordering of columns changes if the upstream table's schema changes.
+    | This should generally be avoided because it can cause slow performance,
+    | cause important schema changes to go undetected, or break production code.
+    | For example:
+    | * If a query does `SELECT t.*` and is expected to return columns `a`, `b`,
+    |   and `c`, the actual columns returned will be wrong/different if columns
+    |   are added to or deleted from the input table.
+    | * `UNION` and `DIFFERENCE` clauses require the inputs have the same number
+    |   of columns (and compatible types).
+    | * `JOIN` queries may break due to new column name conflicts, e.g. the
+    |   query references a column "c" which initially existed in only one input
+    |   table but a column of the same name is added to another table.
+    | * `CREATE TABLE (<<column schema>>) AS SELECT *`
+
+
+    .. code-block:: sql
+
+        WITH cte AS (
+            SELECT * FROM foo
+        )
+
+        SELECT * FROM cte
+        UNION
+        SELECT a, b FROM t
+
+    | **Best practice**
+    | Somewhere along the "path" to the source data, specify columns explicitly.
+
+    .. code-block:: sql
+
+        WITH cte AS (
+            SELECT * FROM foo
+        )
+
+        SELECT a, b FROM cte
+        UNION
+        SELECT a, b FROM t
+
+    """
+
+    _works_on_unparsable = False
+
+    def _handle_alias(self, alias_info, dialect, queries):
+        select_info_target = SelectCrawler.get(
+            alias_info.from_expression_element, queries, dialect
+        )
+        if isinstance(select_info_target, str):
+            # It's an alias to an external table whose
+            # number of columns could vary without our
+            # knowledge. Thus, warn.
+            self.logger.debug(
+```
+
+Evidence 6
+File: examples/03_extracting_references.py
+Symbol: <module>
+Lines: 1-20
+```python
+"""This is an example of how to extract table names."""
+
+import sqlfluff
+
+query_with_ctes = """
+WITH foo AS (SELECT * FROM bar.bar),
+baz AS (SELECT * FROM bap)
+SELECT * FROM foo
+INNER JOIN baz USING (user_id)
+INNER JOIN ban USING (user_id)
+"""
+
+#  -------- PARSING ----------
+parsed = sqlfluff.parse(query_with_ctes)
+
+#  -------- EXTRACTION ----------
+# Under the hood we look for all of the table references
+# which aren't also CTE aliases.
+external_tables = parsed.tree.get_table_references()
+# external_tables == {'bar.bar', 'bap', 'ban'}
+```
+
+Evidence 7
+File: src/sqlfluff/rules/L024.py
+Symbol: Rule_L024
+Lines: 9-38
+```python
+class Rule_L024(Rule_L023):
+    """Single whitespace expected after USING in JOIN clause.
+
+    | **Anti-pattern**
+
+    .. code-block:: sql
+
+        SELECT b
+        FROM foo
+        LEFT JOIN zoo USING(a)
+
+    | **Best practice**
+    | The • character represents a space.
+    | Add a space after USING, to avoid confusing it
+    | for a function.
+
+    .. code-block:: sql
+       :force:
+
+        SELECT b
+        FROM foo
+        LEFT JOIN zoo USING•(a)
+
+    """
+
+    expected_mother_segment_type = "join_clause"
+    pre_segment_identifier = ("name", "using")
+    post_segment_identifier = ("type", "bracketed")
+    expand_children = None
+    allow_newline = True
+```
+
+Evidence 8
+File: test/api/info_test.py
+Symbol: <module>
+Lines: 1-5
+```python
+"""Test using sqlfluff to extract elements of queries."""
+
+import sqlfluff
+
+
+```
+
+Evidence 9
+File: src/sqlfluff/core/rules/analysis/select.py
+Symbol: <module>
+Lines: 19-20
+```python
+
+
+```
+
+Evidence 10
+File: src/sqlfluff/core/templaters/python.py
+Symbol: <module>
+Lines: 145-146
+```python
+
+
+```
+
+Evidence 11
+File: src/sqlfluff/api/info.py
+Symbol: <module>
+Lines: 14-15
+```python
+
+
+```
+
+Evidence 12
+File: src/sqlfluff/api/simple.py
+Symbol: <module>
+Lines: 15-16
+```python
+
+
+```
+
+Evidence 13
+File: src/sqlfluff/cli/commands.py
+Symbol: <module>
+Lines: 62-63
+```python
+
+
+```
+
+Evidence 14
+File: src/sqlfluff/cli/formatters.py
+Symbol: <module>
+Lines: 32-33
+```python
+
+
+```
+
+Evidence 15
+File: src/sqlfluff/cli/helpers.py
+Symbol: <module>
+Lines: 23-24
+```python
+
+
+```
+
+Evidence 16
+File: src/sqlfluff/core/config.py
+Symbol: <module>
+Lines: 49-50
+```python
+
+
+```
+
+Evidence 17
+File: src/sqlfluff/core/enums.py
+Symbol: <module>
+Lines: 14-15
+```python
+
+
+```
+
+Return your answer using exactly this format:
+
+FAULTY_FILE: <repository-relative path>
+FAULTY_SYMBOL: <function or class name>
+REASON: <brief explanation>
