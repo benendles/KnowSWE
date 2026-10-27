@@ -5,6 +5,7 @@ from dataclasses import dataclass, field
 from knowswe.beds.adaptive_controller import AdaptiveBEDSController
 from knowswe.beds.chunk_environment import ChunkInvestigationEnvironment
 from knowswe.beds.hypotheses import HypothesisTracker
+from knowswe.beds.adaptive_reranking import rerank_pending_actions
 
 
 @dataclass(frozen=True)
@@ -40,6 +41,7 @@ def investigate_resiliently(
     max_steps: int = 10,
     max_chunk_tokens: int = 300,
     relevance_mode: str = "chunk",
+    enable_propagation: bool = False,
 ) -> ResilientInvestigationResult:
 
     if max_steps < 0:
@@ -131,6 +133,15 @@ def investigate_resiliently(
                 evidence_id=selected.target,
                 support=assessment.support,
             )
+
+            if enable_propagation and assessment.support != 0:
+                rerank_pending_actions(
+                    controller=controller,
+                    tracker=tracker,
+                    chunks=environment.chunks,
+                    source_location=selected.target,
+                    support=assessment.support,
+                )
 
         steps.append(
             ResilientInvestigationStep(
